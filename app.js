@@ -50,11 +50,12 @@ app.get("/get-ips", (req, res) => {
   });
 });
 
+// Lógica para manejar la ruta raíz ("/") aquí
+// Por ejemplo, puedes renderizar la página HTML o redirigir a otra página.
+app.get("/", (req, res) => {
+  res.send("¡Bienvenido a mi aplicación!");
+});
+
 app.listen(port, () => {
   console.log(`Servidor escuchando en el puerto ${port}`);
-});
-app.get("/", (req, res) => {
-  // Lógica para manejar la ruta raíz ("/") aquí
-  // Por ejemplo, puedes renderizar la página HTML o redirigir a otra página.
-  res.send("¡Bienvenido a mi aplicación!");
 });
