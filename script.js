@@ -31,24 +31,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Función para guardar la dirección IP en la base de datos (ejemplo simplificado)
-  function saveIpAddress(ipAddress) {
-    fetch("/save-ip", {
-      method: "POST",
-      body: JSON.stringify({ ip: ipAddress }),
-      headers: {
-        "Content-Type": "application/json",
-      },
+// Función para guardar la dirección IP en el servidor
+function saveIpAddress(ipAddress) {
+  fetch("/save-ip", {
+    method: "POST",
+    body: JSON.stringify({ ip: ipAddress }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Dirección IP guardada con éxito:", data);
     })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Dirección IP guardada con éxito:", data);
-      })
-      .catch((error) => {
-        console.error("Error al guardar la dirección IP:", error);
-      });
-  }
-});
+    .catch((error) => {
+      console.error("Error al guardar la dirección IP:", error);
+    });
+}
+
 
 app.get("/", (req, res) => {
   // Tu lógica para manejar la ruta raíz ("/") aquí
