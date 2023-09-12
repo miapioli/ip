@@ -49,3 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 });
+
+app.get("/", (req, res) => {
+  // Tu lógica para manejar la ruta raíz ("/") aquí
+});
