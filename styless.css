@@ -45,3 +45,16 @@ form button:hover {
   font-size: 18px;
   text-align: center;
 }
+
+#savedIps {
+  margin-top: 30px;
+}
+
+#ipList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#ipList li {
+  margin-bottom: 10px;
+}
